@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+	
+	 <interceptors>
+         <interceptor name="params" class="com.opensymphony.xwork2.interceptor.ParametersInterceptor"/>
+    </interceptors>
+	
+	   <action name="addStuInfo" class="org.action.StuAddAction">
+   		<result name="success">/showsStu.jsp</result>
+   		<result name="error">/addStuInfo.jsp</result>
+   		<result name="input">/addStuInfo.jsp</result>
+   	   </action>
+ 	</package>
+</struts>
