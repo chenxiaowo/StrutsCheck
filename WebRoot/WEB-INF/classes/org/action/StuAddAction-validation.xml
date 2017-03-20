@@ -22,18 +22,16 @@
 	</field-validator>
 	<field-validator type="stringlength">
 	<param name="trim">true</param>
-	<param name="minLength">11</param>
-	<param name="maxLength">11</param>
-	<message>学号长度必须为11位！</message>
+	<param name="minLength">6</param>
+	<param name="maxLength">6</param>
+	<message>学号长度必须为6位！</message>
 	</field-validator>	
 </field>
 
 <field name="stu.major">
-	<field-validator type="requiredstring">
-		<!--去空格-->
-		<param name="trim">true</param>
+	<field-validator type="required">
 		<!--错误提示信息-->
-		<message>专业是必需的！</message>
+		<message>专业代号是必需的！</message>
 	</field-validator>
 </field>
 
@@ -52,6 +50,4 @@
 		</field-validator>
 	
 </field>
-
-
 </validators>

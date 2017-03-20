@@ -5,14 +5,18 @@
 <struts>
 	<package name="default" extends="struts-default">
 	
-	 <interceptors>
-         <interceptor name="params" class="com.opensymphony.xwork2.interceptor.ParametersInterceptor"/>
+    <interceptors>
+    	<interceptor name="myInterceptor" class="org.tool.MyInterceptor"></interceptor>
     </interceptors>
+	<default-interceptor-ref name=""></default-interceptor-ref>
 	
 	   <action name="addStuInfo" class="org.action.StuAddAction">
    		<result name="success">/showsStu.jsp</result>
    		<result name="error">/addStuInfo.jsp</result>
    		<result name="input">/addStuInfo.jsp</result>
+   		<interceptor-ref name="defaultStack"></interceptor-ref>
+   	   	<interceptor-ref name="myInterceptor"></interceptor-ref>
    	   </action>
+   	   
  	</package>
 </struts>

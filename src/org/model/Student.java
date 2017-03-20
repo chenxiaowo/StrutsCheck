@@ -1,12 +1,12 @@
 package org.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Student {
 	private String stuNo;
 	private String name;
-	private byte sex;
-	private String major;
+	private boolean sex;
+	private int major;
 	private Date birthDay;
 	private String comment;
 	public String getStuNo() {
@@ -21,16 +21,16 @@ public class Student {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public byte getSex() {
+	public boolean getSex() {
 		return sex;
 	}
-	public void setSex(byte sex) {
+	public void setSex(boolean sex) {
 		this.sex = sex;
 	}
-	public String getMajor() {
+	public int getMajor() {
 		return major;
 	}
-	public void setMajor(String major) {
+	public void setMajor(int major) {
 		this.major = major;
 	}
 	public Date getBirthDay() {

@@ -9,14 +9,16 @@
   </head>
   
   <body>
-  	<h1>添加学生信息</h1>
+  	<s:i18n name="messageResource">
+  	<h3><s:text name="title"/></h3>
+  	
   	<s:form action="addStuInfo.action" method="post">
-  		<s:textfield name="stu.stuNo" label="学号" ></s:textfield>
-  		<s:textfield name="stu.name" label="姓名" ></s:textfield>
-  		<s:radio list="#{1:'男',0:'女'}" name="stu.sex" label="性别"></s:radio>
-  		<s:textfield name="stu.major" label="专业" ></s:textfield>
-  		<sx:datetimepicker name="stu.birthDay" label="出生日期" displayFormat="yyyy-MM-dd" language="UTF-8"/>
-  		<s:textfield name="stu.comment" label="备注" ></s:textfield>
+  		<s:textfield name="stu.stuNo" key="stuNo" ></s:textfield>
+  		<s:textfield name="stu.name" key="name" ></s:textfield>
+  		<s:radio list="#{1:getText('male'),0:getText('female')}" name="stu.sex" key="sex"></s:radio>
+  		<s:textfield name="stu.major" key="major" ></s:textfield>
+  		<sx:datetimepicker name="stu.birthDay" key="birthDay" displayFormat="yyyy-MM-dd" language="UTF-8"/>
+  		<s:textfield name="stu.comment" key="comment" ></s:textfield>
   		<table>
   			<tr width="100%">
   				<td><s:submit name="submit" value="添加"/></td>
@@ -24,5 +26,8 @@
   			</tr>
   		</table>
   	</s:form>
+  	
+  	</s:i18n>
+  	
   </body>
 </html>
