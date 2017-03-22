@@ -17,10 +17,12 @@
   		<s:textfield name="stu.name" key="name" ></s:textfield>
   		<s:radio list="#{1:getText('male'),0:getText('female')}" name="stu.sex" key="sex"></s:radio>
   		<s:textfield name="stu.major" key="major" ></s:textfield>
-  		<sx:datetimepicker name="stu.birthDay" key="birthDay" displayFormat="yyyy-MM-dd" language="UTF-8"/>
+  		<sx:datetimepicker  name="stu.birthDay" key="birthDay" displayFormat="yyyy-MM-dd" language="utf-8"/>
   		<s:textfield name="stu.comment" key="comment" ></s:textfield>
+  		
   		<table>
   			<tr width="100%">
+  				
   				<td><s:submit name="submit" value="添加"/></td>
   				<td><s:submit name="reset" value="重置"/></td>
   			</tr>
